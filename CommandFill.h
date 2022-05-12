@@ -6,7 +6,7 @@ class CommandFill :public Command
 {
 public:
 	void setsaveBoard(Board);
-	Board getsaveBoard();
+	Board getsaveboard();
 	void undo(int, int);
 	void execute(int, int, int);
 };
