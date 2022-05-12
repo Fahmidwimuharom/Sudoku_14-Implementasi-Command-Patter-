@@ -5,7 +5,7 @@ void CommandFill::setsaveBoard(Board saveBoard)
 	this->saveBoard = saveBoard;
 }
 
-Board CommandFill::getsaveBoard()
+Board CommandFill::getsaveboard()
 {
 	return saveBoard;
 }
