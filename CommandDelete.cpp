@@ -5,7 +5,7 @@ void CommandDelete::setsaveBoard(Board saveBoard)
 	this->saveBoard = saveBoard;
 }
 
-Board CommandDelete::getsaveBoard()
+Board CommandDelete::getsaveboard()
 {
 	return saveBoard;
 }
