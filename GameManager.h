@@ -21,8 +21,8 @@ public:
 	void play();
 	bool quit();
 	int pause();
-	void undo();
-	void redo();
+	void Undo();
+	void Redo();
 	void setboard(Board*);
 	Board* getboard();
 	void setplayer(Player*);
