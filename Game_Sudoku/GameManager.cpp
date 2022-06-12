@@ -59,10 +59,9 @@ void GameManager::setPlayerUsername()
 
 void GameManager::play()
 {
-	cout << endl << "How many cells do you want to delete/remove? Let's set the difficulty ";
-	int p = 0; 
-	cin >> p;
-	this->board->Difficulty(p);
+	cout << endl << "How many cells do you want to delete/remove? Let's set the difficulty : ";
+	int r = 0; cin >> r;
+	this->board->Difficulty(r);
 	board->Generate();
 	continueGame();
 }
@@ -125,10 +124,10 @@ void GameManager::continueGame()
 		board->draw();
 		cout << endl
 			<< " Choice List" << endl
-			<< "[1] Undo" << endl
-			<< "[2] Redo " << endl
-			<< "[3] Delete " << endl
-			<< "[4] Fill " << endl
+			<< "[1] Fill" << endl
+			<< "[2] Delete " << endl
+			<< "[3] Undo " << endl
+			<< "[4] Redo " << endl
 			<< "[5] Check Wrong Cell" << endl
 			<< "[0] Exit" << endl
 			<< "Input [] : ";
@@ -137,30 +136,30 @@ void GameManager::continueGame()
 		switch (userMenu)
 		{
 		case 1:
-			RedoAct();
-			break;;
-		case 2:
-			UndoAct();
-			break;
-		case 3:
-			cout << "X     :"; 
+			cout << "X     :";
 			cin >> x;
-			cout << "Y     :"; 
+			cout << "Y     :";
 			cin >> y;
-
-			deleteCell(x, y);
-			break;
-			
-		case 4:
-			cout << "X     :"; 
-			cin >> x;
-			cout << "Y     :"; 
-			cin >> y;
-			cout << "Value :"; 
+			cout << "Value :";
 			cin >> z;
 
 			fillCell(x, y, z);
 			break;
+		case 2:
+			cout << "X     :";
+			cin >> x;
+			cout << "Y     :";
+			cin >> y;
+
+			deleteCell(x, y);
+			break;
+		case 3:
+			UndoAct();
+			break;
+		
+		case 4:
+			RedoAct();
+			break;;
 			
 		case 5:
 			CheckWrongCell();
