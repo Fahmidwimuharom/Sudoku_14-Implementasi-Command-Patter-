@@ -14,9 +14,7 @@ int main()
 			<< "1. Play" << endl
 			<< "2. Continue " << endl
 			<< "3. Set Player Name" << endl
-			<< "4. Save" << endl
-			<< "5. Load" << endl
-			<< "0. Exit" << endl
+			<< "4. Exit" << endl
 			<< "Input []: ";
 		cin >> menu;
 
