@@ -12,22 +12,15 @@ int main()
 	{
 		cout << "\n<<- MainMenu ->>" << endl
 			<< "1. Play" << endl
-			<< "2. Continue " << endl
-			<< "3. Set Player Name" << endl
-			<< "4. Exit" << endl
+			<< "2. Exit" << endl
 			<< "Input []: ";
 		cin >> menu;
 
 		switch (menu)
 		{
 		case 1:
-			game.play();
-			break;
-		case 2:
-			game.continueGame();
-			break;
-		case 3:
 			game.setPlayerUsername();
+			game.play();
 			break;
 		case 0:
 			break;
